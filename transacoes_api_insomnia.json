@@ -21,14 +21,14 @@
       "_type": "environment"
     },
     {
-      "_id": "req_post_transacao",
+      "_id": "req_post_transaction",
       "parentId": "wrk_transacoes_api",
-      "name": "POST /transacao",
+      "name": "POST /transaction",
       "method": "POST",
-      "url": "{{ base_url }}/transacao",
+      "url": "{{ base_url }}/transaction",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"transacao\": {\n    \"valor\": 123.45,\n    \"data_hora\": \"2025-07-08T15:30:00Z\"\n  }\n}"
+        "text": "{\n  \"transaction\": {\n    \"valor\": 123.45,\n    \"data_hora\": \"2025-07-08T15:30:00Z\"\n  }\n}"
       },
       "headers": [
         {
@@ -47,11 +47,11 @@
       "_type": "request"
     },
     {
-      "_id": "req_delete_transacao",
+      "_id": "req_delete_transaction",
       "parentId": "wrk_transacoes_api",
-      "name": "DELETE /transacao",
+      "name": "DELETE /transaction",
       "method": "DELETE",
-      "url": "{{ base_url }}/transacao",
+      "url": "{{ base_url }}/transaction",
       "_type": "request"
     }
   ]
