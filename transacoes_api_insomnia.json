@@ -1,0 +1,58 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-07-08T18:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_transacoes_api",
+      "created": 1720464000000,
+      "description": "Projeto de API REST para transações e estatísticas (MongoDB + Rails)",
+      "name": "Transacoes API",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_transacoes_api_base",
+      "parentId": "wrk_transacoes_api",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3000"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "req_post_transacao",
+      "parentId": "wrk_transacoes_api",
+      "name": "POST /transacao",
+      "method": "POST",
+      "url": "{{ base_url }}/transacao",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"transacao\": {\n    \"valor\": 123.45,\n    \"data_hora\": \"2025-07-08T15:30:00Z\"\n  }\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_estatistica",
+      "parentId": "wrk_transacoes_api",
+      "name": "GET /estatistica",
+      "method": "GET",
+      "url": "{{ base_url }}/estatistica",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_transacao",
+      "parentId": "wrk_transacoes_api",
+      "name": "DELETE /transacao",
+      "method": "DELETE",
+      "url": "{{ base_url }}/transacao",
+      "_type": "request"
+    }
+  ]
+}
