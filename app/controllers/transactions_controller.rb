@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  JSON_FIELDS: %i[ value ]
+  JSON_FIELDS = %i[ value created_at ]
 
   def create
     transaction = Transaction.new(transaction_params)
@@ -16,7 +16,7 @@ class TransactionsController < ApplicationController
     head :no_content
   end
 
-  def statistics
+  def stats
     limit = 60.seconds.ago
     transactions = Transaction.where(:created_at.gte => limit)
 
