@@ -45,5 +45,5 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "mongoid", "~> 8.0"
+  gem "mongoid", "~> 9.0"
 end
